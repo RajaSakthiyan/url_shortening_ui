@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #2a2e37;
+}
+
+.main {
+  margin: 125px 0 125px 0;
+  padding: 0 25%;
+}
+
+.url-wrapper {
+  padding: 38px 0 38px;
+}
+
+.title-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.title-logo {
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+  background: url("../public/url_icon.svg") no-repeat center;
+  background-size: 75px;
+}
+
+.title {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 60px;
+  font-weight: 400;
+  color: #2dd9fe;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.title-desc {
+  font-family: serif;
+  font-size: 24px;
+  color: #2dd9fe;
+  letter-spacing: 4px;
+  margin-bottom: 48px;
+}
+
+.url {
+  width: 420px;
+  height: 100px;
+  margin: auto;
+  background-color: #242628;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.url:before {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20% 0 0 20%;
+  background-color: #2dd9fe;
+  background-image: url("../public/favicon.ico");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.url-box {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  color: #2dd9fe;
+  padding: 20px 100px 20px 50px;
+  font-size: 40px;
+  outline: none;
+}
+
+.url-button {
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+}
+
+.url-icon {
+  height: 40px;
+  border: 3px solid #2dd9fe;
+  display: block;
+  position: relative;
+  margin-left: 5px;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.url-icon:before {
+  content: "";
+  width: 3px;
+  height: 15px;
+  position: absolute;
+  right: -2px;
+  top: 30px;
+  display: block;
+  background-color: #2dd9fe;
+  transform: rotate(52deg);
+  right: 22px;
+  top: 23px;
+  height: 18px;
+}
+.url-icon:after {
+  content: "";
+  width: 3px;
+  height: 15px;
+  position: absolute;
+  right: -12px;
+  top: 40px;
+  display: block;
+  background-color: #2dd9fe;
+  transform: rotate(-230deg);
+  right: 22px;
+  top: 13px;
+  height: 18px;
+}
+
+input::placeholder {
+  opacity: 0.25;
+  font-size: 32px;
+  text-align: center;
+  color: #2dd9fe;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.message {
+  font-family: serif;
+  font-size: 24px;
+  color: #2dd9fe;
+  letter-spacing: 4px;
+}
+
+.short-url {
+  font-family: monospace;
+  font-size: 45px;
+  color: #2dd9fe;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.short-url-copy {
+  height: 60px;
+  width: 60px;
+  background: url("../public/copy_icon.svg") no-repeat center;
+  background-size: 60px;
+  cursor: pointer;
+}
+
+.copy_msg {
+  font-family: monospace;
+  color: #2dd9fe;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  height: 20px;
+  width: 140px;
+  background-image: linear-gradient(#fff 20px, transparent 0),
+    linear-gradient(#fff 20px, transparent 0),
+    linear-gradient(#fff 20px, transparent 0),
+    linear-gradient(#fff 20px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: 0 0, 40px 0, 80px 0, 120px 0;
+  animation: pgfill 1s linear infinite;
+}
+@keyframes pgfill {
+  0% {
+    background-image: linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  25% {
+    background-image: linear-gradient(#2dd9fe 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  50% {
+    background-image: linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#2dd9fe 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  75% {
+    background-image: linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#2dd9fe 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0);
+  }
+  100% {
+    background-image: linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#fff 20px, transparent 0),
+      linear-gradient(#2dd9fe 20px, transparent 0);
+  }
+}
