@@ -1,4 +1,4 @@
-import { IServerResponse, IShortUrlResponse } from "./type";
+import { IServerResponse, IShortUrlResponse } from "./types";
 
 const SHORT_URL = "http://127.0.0.1:8082/"; //"https://sho.rt/";
 const SERVER_API = "http://127.0.0.1:8081/create_short_url";

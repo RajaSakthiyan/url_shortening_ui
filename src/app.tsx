@@ -1,7 +1,7 @@
 import React, { useState, FormEvent } from "react";
 import { PageTitle } from "./title";
 import { PageContext, defaultPageContextData } from "./page_data";
-import { IPageContextModel, IShortUrlResponse, Nullable } from "./type";
+import { IPageContextModel, IShortUrlResponse, Nullable } from "./types";
 import UrlForm from "./form";
 import { ShowShortUrl } from "./show_short_url";
 import { ShowLoader } from "./loader";

@@ -1,5 +1,5 @@
 import { FormEvent, createContext, useContext } from "react";
-import { IPageContextModel } from "./type";
+import { IPageContextModel } from "./types";
 
 export const defaultPageContextData: IPageContextModel = {
   pageTitle: "sho.rt",
