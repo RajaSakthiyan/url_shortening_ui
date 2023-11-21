@@ -11,7 +11,7 @@ const defaultShortUrlResponse: IShortUrlResponse = {
 
 async function getShortURl(data: string): Promise<IShortUrlResponse> {
   try {
-    await fetch("https://hub.dummyapis.com/delay?seconds=1")
+    // await fetch("https://hub.dummyapis.com/delay?seconds=1")
     const response = await fetch(SERVER_API, {
       method: "POST",
       headers: {
