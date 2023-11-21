@@ -23,8 +23,8 @@ export const App = () => {
     event.preventDefault();
     updateStates(defaultShortUrlResponse, true);
     const formData = new FormData(event.target as HTMLFormElement);
-    // console.log({ data: Object.fromEntries(formData.entries()) });
-    const response: IShortUrlResponse = await getShortURl(formData);
+    const data = JSON.stringify(Object.fromEntries(formData.entries()));
+    const response: IShortUrlResponse = await getShortURl(data);
     updateStates(response, false);
     return false;
   };

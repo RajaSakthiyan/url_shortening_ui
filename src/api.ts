@@ -1,8 +1,7 @@
 import { IServerResponse, IShortUrlResponse } from "./type";
 
-const SHORT_URL = "https://sho.rt/";
-const SERVER_API =
-  "https://run.mocky.io/v3/3fc6a678-29c1-422e-9e46-c1c1e9b1cd89";
+const SHORT_URL = "http://127.0.0.1:8082/"; //"https://sho.rt/";
+const SERVER_API = "http://127.0.0.1:8081/create_short_url";
 
 const defaultShortUrlResponse: IShortUrlResponse = {
   userMessage: null,
@@ -10,14 +9,16 @@ const defaultShortUrlResponse: IShortUrlResponse = {
   shortUrl: null,
 };
 
-async function getShortURl(data: FormData): Promise<IShortUrlResponse> {
+async function getShortURl(data: string): Promise<IShortUrlResponse> {
   try {
+    await fetch("https://hub.dummyapis.com/delay?seconds=1")
     const response = await fetch(SERVER_API, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: data,
+      mode: "cors",
     });
     const result: IServerResponse = await response.json();
     return {
